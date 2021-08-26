@@ -17,7 +17,7 @@
         background-color: #fff;
         position: relative;
         min-height: 100vh;
-        max-width: 370px;
+        max-width: 768px;
         margin-left: auto;
         margin-right: auto;
         display: flex;
@@ -32,7 +32,7 @@
     
     .nav-bar {
         width: 100%;
-        max-width: 370px;
+        max-width: 768px;
         margin: 0 auto;
         overflow: auto;
         bottom: 0;
@@ -75,8 +75,8 @@
         latitude = p.coords.latitude;
         longitude = p.coords.longitude;
         pesan = 'Location: ' + latitude + ',' + longitude;
-        pesan = pesan + "<br/>";
-        pesan = pesan + '<img src="https://maps.googleapis.com/maps/api/staticmap?size=400×400&amp;zoom=13&amp;markers=color:red%7Clabel:C%7C' + latitude + ',' + longitude + '"/>';
+        //pesan = pesan + "<br/>";
+        //pesan = pesan + '<img src="https://maps.googleapis.com/maps/api/staticmap?size=400×400&amp;zoom=13&amp;markers=color:red%7Clabel:C%7C' + latitude + ',' + longitude + '"/>';
         div_isi = document.getElementById("div_isi");
         //alert(pesan);
         div_isi.innerHTML = pesan;
