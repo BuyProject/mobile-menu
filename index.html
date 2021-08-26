@@ -71,40 +71,37 @@
                 enableHighAccuracy: true
             });
         } else {
-            div_isi = document.getElementById("div_isi");
-            div_isi.innerHTML = "Tidak ada fungsi geolocation";
+            locations = document.getElementById("location");
+            locations.innerHTML = "Tidak ada fungsi geolocation";
         }
     }
 
     function success_callback(p) {
         latitude = p.coords.latitude;
         longitude = p.coords.longitude;
-        pesan = latitude + ',' + longitude;
-        //pesan = pesan + "<br/>";
-        //pesan = pesan + '<img src="https://maps.googleapis.com/maps/api/staticmap?size=400×400&amp;zoom=13&amp;markers=color:red%7Clabel:C%7C' + latitude + ',' + longitude + '"/>';
-        div_isi = document.getElementById("div_isi");
-        div_isi.value = pesan;
+        locations = document.getElementById("location");
+        locations.value = latitude + ',' + longitude;
     }
 
     function error_callback(p) {
-        div_isi = document.getElementById("div_isi");
-        div_isi.value = 'error = ' + p.message;
+        locations = document.getElementById("location");
+        locations.value = 'error = ' + p.message;
     }
 
     get_location();
 
     window.setInterval(function() {
         get_location();
-    }, 5000);
+    }, 30000);
 </script>
 
 
 <body>
     <div class="main">
         <section class="page">
-            <div class="container">
+            <div class="container-fluid">
                 <label>Location:</label>
-                <input type="text" name="location" class="form-control" id="div_isi" value="">
+                <input type="text" name="location" class="form-control" id="location" value="">
             </div>
         </section>
         <section class="nav-bar">
