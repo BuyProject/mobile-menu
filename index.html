@@ -120,7 +120,7 @@
         latitude = p.coords.latitude;
         longitude = p.coords.longitude;
         locations = document.getElementById("location");
-        locations.value = latitude + ',' + longitude;
+        locations.value = longitude + ',' + latitude;
 
         mapboxgl.accessToken = 'pk.eyJ1IjoiYnV5bWFwcyIsImEiOiJjazlyOG9uMXMwcnFoM25xcWJrOWVpOGJ0In0.EzvSdWdOLFTeOF7qTD0xUw';
         const map = new mapboxgl.Map({
